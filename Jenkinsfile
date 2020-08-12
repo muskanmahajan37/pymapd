@@ -88,6 +88,7 @@ pipeline {
                         sh """
                             # Pull required test docker container images
                             docker pull $db_cuda_container_image
+                            docker pull $db_cpu_container_image
                             docker pull $testscript_container_image
 
                             # Create docker network
